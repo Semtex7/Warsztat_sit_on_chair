@@ -14,8 +14,8 @@ html {
 .main-container {
   width: 1000px;
   margin: 0 auto;
-  padding-top: .5em;
-  padding-bottom: 2.5em;
+  padding: 1.5em 0;
+  position: relative;
   /* brzydkie ale dziala- do poprawki */
 }
 header h1 span {
@@ -27,7 +27,7 @@ a {
   font-size: 1rem;
 }
 nav {
-  overflow: visible;
+
 }
 header {
   color: #fff;
@@ -36,13 +36,20 @@ header {
   letter-spacing: .1em;
 }
 header h1 {
-  float: left;
   font-size: 1rem;
-  padding: .4em 0;
+  padding: .9em 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header nav {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 header nav ul {
-  float: right;
   list-style-type: none;
+  padding: .5em 0;
 }
 header nav ul li {
   display: inline-block;
@@ -61,7 +68,57 @@ header nav ul ul {
 }
 header nav ul li:hover ul {
   position: absolute;
-  float: none;
   display: block;
-  top: 2em;
+  top: 2.5em;
+  text-transform: none;
+  padding: 1em 1em 1em 1em;
+  left: -1.7em;
+}
+.triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: black;
+  display: none;
+}
+header nav ul li:hover .triangle {
+  display: block;
+}
+#slider {
+
+  height: 500px;
+  background: rgba(242,246,248,1);
+background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 44%, rgba(203,209,214,1) 99%, rgba(224,239,249,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,246,248,1)), color-stop(44%, rgba(242,246,248,1)), color-stop(99%, rgba(203,209,214,1)), color-stop(100%, rgba(224,239,249,1)));
+background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 44%, rgba(203,209,214,1) 99%, rgba(224,239,249,1) 100%);
+background: -o-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 44%, rgba(203,209,214,1) 99%, rgba(224,239,249,1) 100%);
+background: -ms-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 44%, rgba(203,209,214,1) 99%, rgba(224,239,249,1) 100%);
+background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 44%, rgba(203,209,214,1) 99%, rgba(224,239,249,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0 );
+
+}
+#slider .main-container * {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 3rem;
+}
+#slider .main-container article {
+  width: 78%;
+}
+#slider .main-container .left-arrow,
+#slider .main-container .right-arrow {
+  width: 10%;
+  font-size: 100px;
+  color: springgreen;
+}
+#slider .main-container article * {
+  display: inline-block;
+  vertical-align: middle;
+}
+#slider .main-container article img {
+  width: 40%;
+}
+#slider .main-container article div {
+  width: 55%;
 }
