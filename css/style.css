@@ -14,9 +14,9 @@ html {
 .main-container {
   width: 1000px;
   margin: 0 auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  overflow: auto;
+  padding-top: .5em;
+  padding-bottom: 2.5em;
+  /* brzydkie ale dziala- do poprawki */
 }
 header h1 span {
   color: springgreen;
@@ -50,10 +50,18 @@ header nav ul li {
 header nav ul>li {
   display: inline-block;
   margin-top: .4em;
+  position: relative;
 }
 header nav ul li a {
   padding: .4em;
 }
 header nav ul ul {
   display: none;
+  background-color: black;
+}
+header nav ul li:hover ul {
+  position: absolute;
+  float: none;
+  display: block;
+  top: 2em;
 }
